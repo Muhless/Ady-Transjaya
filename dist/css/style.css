@@ -4,11 +4,18 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
-}
 
-.container {
-    width: 80%;
-    margin-inline: auto;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    ::-moz-scrollbar {
+        display: none;
+    }
+
+    ::-o-scrollbar {
+        display: none;
+    }
 }
 
 header {
@@ -24,7 +31,14 @@ header {
 .navigation {
     width: 100%;
     height: 80px;
-    padding: 10px 0 10px 0;
+    /* padding: 10px 0 10px 0; */
+    position: fixed;
+    background-color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin-inline: auto;
 }
 
 .navigation .box-navigation {
@@ -32,6 +46,10 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.box-navigation {
+    height: 80px;
 }
 
 .box img {
@@ -55,7 +73,8 @@ header {
 
 .navigation .box-navigation .box:nth-child(2) ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
+    /* color: white; */
 }
 
 .navigation .box-navigation .box:nth-child(2) ul li a:hover {
@@ -74,15 +93,18 @@ header {
 
 /* hero */
 
-.hero {
-    position: absolute;
+header .hero {
+    position: relative;
+    z-index: 100;
+    text-align: center;
     top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* top: 50%; */
+    /* right: 50%; */
+    /* transform: translate(50%, -50%); */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
 .hero h1 {
@@ -129,8 +151,6 @@ header {
 .about {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    align-items: center;
 }
 
 .box-about {
@@ -140,10 +160,55 @@ header {
     justify-content: center;
 }
 
-.isi img {
-    width: 500px;
+/* layanan */
+.layanan {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+
+.box-layanan {
+    align-items: center;
+}
+
+.layanan-title {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    justify-content: center;
+    margin-top: 90px;
+    margin-bottom: 50px;
+    text-decoration: underline;
+    color: #1891C8;
+}
+
+.semua-layanan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.isi {
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
     border-radius: 30px;
 }
+
+.isi h3 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.isi img {
+    width: 200px;
+    border-radius: 30px;
+    transform: rotate();
+}
+
 
 /* service */
 
@@ -152,6 +217,7 @@ header {
     height: 100vh;
     display: flex;
     align-items: center;
+    background-color: #fafafa;
 }
 
 .container-service {
@@ -163,24 +229,90 @@ header {
     align-items: center;
 }
 
-.box-service {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
 .service-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.box-service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .box-service p {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .box-service img {
     width: 80px;
+}
+
+/* barang */
+.barang {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-barang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-barang {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.judul-barang {
+    align-items: center;
+    font-size: 25px;
+}
+
+/* footer */
+
+footer {
+    margin: 0;
+    padding: 0;
+    padding: 50px 0px 20px 0px;
+    background-color: #343a40;
+    color: #fff;
+}
+
+footer .layar-dalam {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .layar-dalam div {
+    width: 20%;
+}
+
+footer .layar-dalam h5 {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer .layar-dalam .copyright {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #666;
+    text-align: center;
 }
 
 @media screen and (max-width:990px) {
