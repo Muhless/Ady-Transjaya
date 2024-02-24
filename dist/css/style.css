@@ -151,6 +151,8 @@ header .hero {
 .about {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .box-about {
@@ -160,38 +162,65 @@ header .hero {
     justify-content: center;
 }
 
+.about-all h1 {
+    font-size: 40px;
+}
+
+.about-all p {
+    font-size: 20px;
+}
+
+.box-about img {
+    width: 700px;
+}
+
 /* layanan */
 .layanan {
     width: 100vw;
     height: 100vh;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
 }
 
 
 .box-layanan {
-    align-items: center;
-}
-
-.layanan-title {
-    display: flex;
-    align-items: center;
-    font-size: 25px;
     justify-content: center;
-    margin-top: 90px;
-    margin-bottom: 50px;
-    text-decoration: underline;
-    color: #1891C8;
+    align-items: center;
 }
 
 .semua-layanan {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+
+.layanan-isi {
+    display: flex;
+    flex-direction: row;
+}
+
+.layanan-isi h1 {
+    font-size: 40px;
+}
+
+.layanan-isi .isi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .isi {
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    /* box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset; */
     border-radius: 30px;
+    margin: 10px;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
 }
 
 .isi h3 {
@@ -199,8 +228,7 @@ header .hero {
     align-items: center;
     display: flex;
     margin-top: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    font-family: cursive;
 }
 
 .isi img {
@@ -217,7 +245,6 @@ header .hero {
     height: 100vh;
     display: flex;
     align-items: center;
-    background-color: #fafafa;
 }
 
 .container-service {
@@ -254,33 +281,6 @@ header .hero {
     width: 80px;
 }
 
-/* barang */
-.barang {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container-barang {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.box-barang {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.judul-barang {
-    align-items: center;
-    font-size: 25px;
-}
-
 /* footer */
 
 footer {
@@ -291,29 +291,44 @@ footer {
     color: #fff;
 }
 
-footer .layar-dalam {
+.contact {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-footer .layar-dalam div {
+.contact div {
     width: 20%;
 }
 
-footer .layar-dalam h5 {
+.contact h5 {
     margin-top: 0px;
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
-footer .layar-dalam .copyright {
+.contact .copyright {
     width: 100%;
     margin-top: 30px;
     padding-top: 30px;
     border-top: 1px solid #666;
     text-align: center;
 }
+
+.contact a i {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.contact img {
+    margin-top: 20px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
 
 @media screen and (max-width:990px) {
     .navigation .box-navigation .box:nth-child(2) {
@@ -388,12 +403,14 @@ footer .layar-dalam .copyright {
         font-size: 15px;
     }
 
-    .about .box-about .isi:nth-child(1) {
-        padding-right: 30px;
+    .box-about {
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
     }
 
-    .isi img {
-        width: 300px;
+    .about .box-about .isi:nth-child(1) {
+        padding-right: 30px;
     }
 }
 
