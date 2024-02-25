@@ -589,8 +589,8 @@ footer {
 
     /* mobil */
     .mobil {
-        /* align-items: normal; */
-        height: 180vh;
+        align-items: normal;
+        height: 200vh;
     }
 
     .box-mobil {
