@@ -297,6 +297,7 @@ header {
 footer {
     margin: 0;
     padding: 0;
+    width: 100%;
     padding: 50px 0px 20px 0px;
     background-color: #343a40;
     color: #fff;
@@ -391,25 +392,11 @@ footer {
 
 
     /* hero */
-    .hero h1 {
-        font-size: 40px;
-    }
 
-    .hero p {
-        font-size: 20px;
-    }
-
-    .hero button {
-        font-size: 17px;
-        width: 15rem;
-        height: 40px;
-        border-style: none;
-        border-radius: 20px;
-        margin-top: 30px;
-    }
 
     /* about */
     .about {
+        width: 100%;
         font-size: 15px;
     }
 
@@ -419,17 +406,43 @@ footer {
         justify-content: center;
     }
 
+    .box-about img {
+        width: 50px;
+    }
+
     .about .box-about .isi:nth-child(1) {
         padding-right: 30px;
     }
+
+    .isi {
+        padding: 0;
+        margin: 0;
+    }
+
 }
 
 @media screen and (max-width: 375px) {
+
+    * {
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        ::-moz-scrollbar {
+            display: none;
+        }
+
+        ::-o-scrollbar {
+            display: none;
+        }
+    }
+
 
     /* navbar */
     .navigation {
         width: 100%;
         height: 70px;
+        position: fixed;
     }
 
     .box a img {
@@ -490,6 +503,21 @@ footer {
     .hero h1 {
         font-size: 30px;
     }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .hero button {
+        font-size: 17px;
+        width: 15rem;
+        height: 40px;
+        border-style: none;
+        border-radius: 20px;
+        margin-top: 30px;
+    }
+
+
 
     /* about */
     .box-about {
@@ -561,9 +589,8 @@ footer {
 
     /* mobil */
     .mobil {
-        align-items: normal;
-        height: 190vh;
-        width: 100%;
+        /* align-items: normal; */
+        height: 180vh;
     }
 
     .box-mobil {
