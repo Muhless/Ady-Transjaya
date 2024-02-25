@@ -37,6 +37,7 @@ header {
     position: fixed;
     background-color: #fff;
     display: block;
+    z-index: 1;
 }
 
 .container {
@@ -152,8 +153,17 @@ header {
     color: black;
 }
 
-.hero i {
-    margin-left: 5px;
+.hero button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero a button i {
+    margin-left: 10px;
+    justify-content: center;
+    text-align: center;
 }
 
 /* about */
@@ -162,6 +172,7 @@ header {
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .box-about {
@@ -413,6 +424,18 @@ footer {
 }
 
 @media screen and (max-width: 375px) {
+
+    /* navbar */
+    .navigation {
+        height: 70px;
+    }
+
+    .box a img {
+        margin-top: 10px;
+        width: 80px;
+    }
+
+    /* right navigation */
     .navigation .box-navigation .box:nth-child(2) {
         display: flex;
         position: absolute;
@@ -461,6 +484,10 @@ footer {
         font-size: 28px;
     }
 
+
+
+    /* end navbar */
+
     .hero h1 {
         font-size: 30px;
     }
@@ -488,6 +515,10 @@ footer {
     /* end about */
 
     /* service */
+    .layanan {
+        height: 110vh;
+    }
+
     .semua-layanan {
         display: flex;
         flex-direction: column;
